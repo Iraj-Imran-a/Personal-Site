@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iraj Web - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Raleway&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Raleway', sans-serif;
+      background-image: url("Gingham (1).jpg");
+      background-size: cover;
+      background-repeat: repeat;
+      background-attachment: fixed;
+    }
+
+    .container {
+      width: 90%;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff8fc;
+      border: 3px double hotpink;
+      border-radius: 20px;
+      box-shadow: 5px 5px 0 #ff89d4;
+    }
+
+    .header {
+      position: relative;
+      text-align: center;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 20px;
+      color: #ff1493;
+      text-shadow: 2px 2px 0 #ffecf6;
+      margin-bottom: 20px;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 250px;
+      height: 100px;
+      background-image: url("stratberry.jpg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0.15;
+      z-index: -1;
+    }
+
+    .nav-row {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .nav {
+      background-color: #ffe3f4;
+      border: 2px dashed #ff69b4;
+      border-radius: 12px;
+      padding: 15px;
+      align-self: flex-start;
+      min-height:80%;
+    }
+
+    .nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .nav li {
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav img.icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      font-weight: bold;
+      font-family: 'Courier New', Courier, monospace;
+      color: #d02670;
+      transition: color 0.3s;
+    }
+
+    .nav a:hover {
+      color: #ff1493;
+    }
+
+    .marquee-container {
+      grid-column: 1 / span 2;
+      background-color: #fff0f8;
+      border: 3px dotted #ff89d4;
+      border-radius: 12px;
+      overflow: hidden;
+      padding: 10px;
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+
+    .marquee-text {
+      white-space: nowrap;
+      display: inline-block;
+      animation: scroll-left 20s linear infinite;
+      font-size: 16px;
+      color: #800080;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .strawberry-img {
+      display: block;
+      max-width: 150px;
+      margin: 0 auto 20px;
+      border: 3px groove hotpink;
+      border-radius: 12px;
+    }
+
+    .about-section {
+      margin-top: 0;
+      background-color: #fff0f6;
+      padding: 20px;
+      border: 2px dashed #ff89d4;
+      border-radius: 15px;
+      font-family: 'Courier New', Courier, monospace;
+      color: #a2006d;
+      align-self: flex-end;
+    }
+
+
+
+    .extra-images {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      gap: 10px;
+    }
+
+    .extra-images img {
+      width: 200px;
+      height: auto;
+      border: 2px dashed hotpink;
+      border-radius: 8px;
+    }
+    .flex-container{
+      display: flex;
+    }
+
+    .image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.gallery-card {
+  background-color: #fff0f8;
+  border: 2px dashed hotpink;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 3px 3px 0 #ffb6d9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.gallery-card:hover {
+  transform: scale(1.03);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.caption {
+  margin-top: 10px;
+  font-size: 14px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #800060;
+  text-align: center;
+}
+/* Lightbox overlay */
+#lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Image inside the lightbox */
+#lightbox-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border: 5px solid hotpink;
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+
+    @keyframes scroll-left {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="stratberry.jpg" alt="Strawberry graphic" class="strawberry-img">
+    <div class="header">*~ Iraj Web Portfolio ~*</div>
+    <div class="marquee-container">
+        <div class="marquee-text">
+          ✧･ﾟ: *✧･ﾟ:* Welcome to my indie web corner! ✿ Graphic Design ✿ Code ✿ Chaos ✿ Soft aesthetics ✧･ﾟ: *✧･ﾟ:*
+        </div>
+      </div>
+
+
+    <div class="flex-container">
+      <div class="nav-row">
+      <div class="nav">
+        <ul>
+          <li><img src="strawberry icon.jpg" class="icon" alt="strawberry"><a href="./new_blogs.html">Blog Page</a></li>
+          <li><img src="strawberry icon.jpg" class="icon" alt="insta"><a href="https://www.instagram.com/i.roar.sometimes/" target="_blank">Instagram</a></li>
+        </ul>
+      </div>
+
+      
+    </div>
+
+    <div class="about-section">
+      <h3>About Me</h3>
+      <p>Hi! I'm Iraj, I'm a CS student with an appreciation for the visual medium. I have done branding work
+        but can't seem to find the backups on my old computer, so here's my other stuff. I hope you enjoy my website's
+        retro aesthetic and my art's all over the place aesthetic. :)
+          <br><br>
+        PS. Also check out my Insta!
+      </div>
+
+
+    </div>
+    
+
+    <div class="image-gallery">
+  <div class="gallery-card">
+    <img src="Yellow_Quill.png" alt="Yellow quill art">
+    <p class="caption">Yellow Quill – Typing practice doodle</p>
+  </div>
+  <div class="gallery-card">
+    <img src="Lavendar_Quill.png" alt="Lavender quill art">
+    <p class="caption">Lavender Quill – Soft pixel art vibe</p>
+  </div>
+  <div class="gallery-card">
+    <img src="Arphodite.jpg" alt="Arphodite design">
+    <p class="caption">Arphodite – Character concept art</p>
+  </div>
+  <div class="gallery-card">
+    <img src="Cake.jpg" alt="Cake">
+    <p class="caption">Cake – Pastel doodle for a moodboard</p>
+  </div>
+  <div class="gallery-card">
+    <img src="Closer.jpg" alt="Closer">
+    <p class="caption">Closer – Graphic design exploration</p>
+  </div>
+  <div class="gallery-card">
+    <img src="Strawberries.jpg" alt="Strawberries">
+    <p class="caption">Strawberries – Desktop wallpaper pattern</p>
+  </div>
+  <div class="gallery-card">
+    <img src="Secret Garden.jpg" alt="Secret Garden">
+    <p class="caption">Secret Garden – dreamy collage-style layout</p>
+  </div>
+  <div class="gallery-card">
+    <img src="Pillar.jpg" alt="Pillar">
+    <p class="caption">Pillar – Poster made for a themed zine</p>
+  </div>
+</div>
+
+  </div>
+  <div id="lightbox-overlay">
+  <img src="" alt="Full Image">
+</div>
+
+<script>
+  const overlay = document.getElementById('lightbox-overlay');
+  const overlayImage = overlay.querySelector('img');
+
+  document.querySelectorAll('.gallery-card img').forEach(img => {
+    img.addEventListener('click', () => {
+      overlayImage.src = img.src;
+      overlay.style.display = 'flex';
+    });
+  });
+
+  overlay.addEventListener('click', () => {
+    overlay.style.display = 'none';
+    overlayImage.src = '';
+  });
+</script>
+
+</body>
+</html>

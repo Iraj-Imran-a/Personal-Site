@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iraj Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Raleway&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Raleway', sans-serif;
+      background-image: url("Gingham (1).jpg");
+      background-size: cover;
+      background-repeat: repeat;
+      background-attachment: fixed;
+    }
+
+    .container {
+      width: 90%;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff8fc;
+      border: 3px double hotpink;
+      border-radius: 20px;
+      box-shadow: 5px 5px 0 #ff89d4;
+    }
+
+    .header {
+      position: relative;
+      text-align: center;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 20px;
+      color: #ff1493;
+      text-shadow: 2px 2px 0 #ffecf6;
+      margin-bottom: 20px;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 250px;
+      height: 100px;
+      background-image: url("stratberry.jpg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0.15;
+      z-index: -1;
+    }
+
+    .nav-row {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .nav {
+      background-color: #ffe3f4;
+      border: 2px dashed #ff69b4;
+      border-radius: 12px;
+      padding: 15px;
+    }
+
+    .nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .nav li {
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav img.icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      font-weight: bold;
+      font-family: 'Courier New', Courier, monospace;
+      color: #d02670;
+      transition: color 0.3s;
+    }
+
+    .nav a:hover {
+      color: #ff1493;
+    }
+
+    .marquee-container {
+      grid-column: 1 / span 2;
+      background-color: #fff0f8;
+      border: 3px dotted #ff89d4;
+      border-radius: 12px;
+      overflow: hidden;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    .marquee-text {
+      white-space: nowrap;
+      display: inline-block;
+      animation: scroll-left 20s linear infinite;
+      font-size: 16px;
+      color: #800080;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .blog-section {
+      margin-top: 30px;
+      background-color: #fff0f6;
+      padding: 20px;
+      border: 2px dashed #ff89d4;
+      border-radius: 15px;
+      font-family: 'Courier New', Courier, monospace;
+      color: #a2006d;
+    }
+
+    @keyframes scroll-left {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">*~ Iraj's Blog ~*</div>
+
+   
+
+      <div class="marquee-container">
+
+        <div class="marquee-text">
+          ✿･ﾟ: *✿･ﾟ:* Welcome to Iraj's blog! ☕ Stories ✿ Rants ✿ Progress ✿ Aesthetic chaos ✿･ﾟ: *✿･ﾟ:*
+        </div>
+      </div>
+ 
+    <div class="blog-section">
+      <h3>Motivation & Mindset</h3>
+      <p>I’ve struggled with motivation. In school, I chased high marks with minimal effort. That mindset followed me into university, where I hit some lows—but also realized I needed to change. I found Dr. K, a psychiatrist YouTuber, and his video on "Puer Aeternus" (men of inaction) really resonated with me. It showed me that effort isn’t something to be avoided—it's the path to growth.</p>
+      <p>I now aspire to learn properly. I’ve started PyTorch, slowly escaping tutorial hell. I’m also building this site in raw HTML & CSS, plus a little JavaScript, my second personal webiste! It may look amateur, but I’m proud of it. I’m creating for me, and if you like it too, even better! </p>
+      <p>Thanks for reading!</p>
+      <p style="text-align: center; margin-top: 30px;"><a href="./index.html" style="font-family: 'Courier New', Courier, monospace; background: #ffe0f5; padding: 10px 20px; border: 2px solid #ff69b4; border-radius: 10px; color: #a2006d; text-decoration: none;">← Back to Home</a></p>
+    </div>
+  </div>
+</body>
+</html>
